@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/card";
 import { Users, FileImage } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 async function SettingsPage() {
   const [categories, userCount, assetsCount] = await Promise.all([
     getAllCategoriesAction(),
