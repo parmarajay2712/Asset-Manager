@@ -107,7 +107,7 @@ export function SidebarLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 md:ml-64 min-h-screen">
+      <main className="flex-1 max-w-full md:ml-64 min-h-screen overflow-x-hidden">
         {/* Mobile Header Equivalent */}
         <div className="md:hidden h-16 border-b border-[#1f1f1f] flex items-center justify-between px-4 bg-[#0a0a0a] sticky top-0 z-30">
           <Link href="/" className="flex items-center gap-2 group">

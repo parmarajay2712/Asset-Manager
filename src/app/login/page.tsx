@@ -23,7 +23,7 @@ async function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#0a0a0a] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[600px] h-[90vw] md:h-[600px] bg-white/[0.02] blur-[60px] md:blur-[100px] rounded-full pointer-events-none" />
 
       <div className="w-full max-w-[400px] px-4 relative z-10">
         <Link

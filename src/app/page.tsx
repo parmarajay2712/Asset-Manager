@@ -28,7 +28,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex flex-col items-center justify-center min-h-[80vh]">
         {/* Abstract Background Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/[0.03] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[90vw] md:w-[600px] h-[90vw] md:h-[600px] bg-white/[0.03] blur-[60px] md:blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto relative z-10 px-4">
           <motion.div 
@@ -95,7 +95,7 @@ export default function Home() {
             <p className="text-lg text-white/50 max-w-2xl mx-auto">A complete toolset engineered for performance and visual excellence.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="p-8 rounded-2xl bg-[#111] border border-[#1f1f1f] hover:border-white/20 transition-colors group">
               <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-white/10 transition-colors">
                 <Upload className="w-6 h-6 text-white" />
@@ -131,7 +131,7 @@ export default function Home() {
             <p className="text-lg text-white/50 max-w-2xl mx-auto">Three simple steps from upload to global distribution.</p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-px bg-white/10" />
             

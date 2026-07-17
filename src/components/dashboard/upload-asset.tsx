@@ -235,7 +235,7 @@ function UploadAsset({ categories }: UploadDialogProps) {
           Upload Asset
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] bg-[#111]/80 backdrop-blur-3xl border border-white/10 shadow-2xl p-0 overflow-hidden text-white gap-0 rounded-2xl">
+      <DialogContent className="w-[95vw] sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-[#111]/80 backdrop-blur-3xl border border-white/10 shadow-2xl p-0 text-white gap-0 rounded-2xl">
         <DialogHeader className="p-6 pb-2 border-b border-white/5">
           <DialogTitle className="text-xl font-bold tracking-tight text-white">Upload New Asset</DialogTitle>
         </DialogHeader>

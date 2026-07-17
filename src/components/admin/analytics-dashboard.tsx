@@ -264,7 +264,7 @@ export default function AnalyticsDashboard({
                 {recentActivity.length > 0 ? (
                   recentActivity.map((activity) => (
                     <TableRow key={activity.id} className="border-white/5 hover:bg-white/5">
-                      <TableCell className="font-medium truncate max-w-[200px] text-white">
+                      <TableCell className="font-medium truncate max-w-[120px] sm:max-w-[200px] text-white">
                         {activity.title}
                       </TableCell>
                       <TableCell className="text-white/70">{activity.userName}</TableCell>
