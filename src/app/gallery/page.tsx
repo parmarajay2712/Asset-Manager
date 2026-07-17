@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { formatViewCount } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import SortSelect from "./sort-select";
 
 interface GalleryPageProps {
   searchParams: Promise<{
@@ -108,22 +109,7 @@ async function GalleryContent({ searchParams }: GalleryPageProps) {
             </div>
             
             <div className="shrink-0 bg-black border border-white/10 rounded-full px-1 py-1">
-              <select
-                className="text-sm bg-transparent border-none text-white/80 py-1 pl-2 pr-6 focus:ring-0 appearance-none cursor-pointer"
-                defaultValue={sort}
-              >
-                <option value="recent" className="bg-[#111] text-white">Recent</option>
-                <option value="popular" className="bg-[#111] text-white">Popular</option>
-              </select>
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    document.querySelector('select').addEventListener('change', function(e) {
-                      window.location.href = '${buildPageUrl(1)}'.replace(/sort=[^&]*/, '').replace(/\\?$/, '') + (this.value === 'popular' ? '${categoryId ? '&' : '?'}sort=popular' : '');
-                    });
-                  `,
-                }}
-              />
+              <SortSelect sort={sort} categoryId={categoryId} />
             </div>
           </div>
         </div>
@@ -151,6 +137,7 @@ async function GalleryContent({ searchParams }: GalleryPageProps) {
                       src={asset.fileUrl}
                       alt={asset.title}
                       fill
+                      sizes="(max-width: 768px) 256px, 320px"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
@@ -207,6 +194,7 @@ async function GalleryContent({ searchParams }: GalleryPageProps) {
                             src={asset.fileUrl}
                             alt={asset.title}
                             fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                         </div>
