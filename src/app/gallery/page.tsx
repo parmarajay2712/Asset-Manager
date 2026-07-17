@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { formatViewCount } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import SortSelect from "./sort-select";
+import SortSelect from "@/app/gallery/sort-select";
 
 interface GalleryPageProps {
   searchParams: Promise<{
